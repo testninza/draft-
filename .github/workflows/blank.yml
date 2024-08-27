@@ -10,6 +10,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: echo "🎉 The job was automatically triggered by a pull request."
+      - name: Check out repository code
+        uses: actions/checkout@v4
   Explore-hello-Actions3:
     runs-on: ubuntu-latest
     steps:
