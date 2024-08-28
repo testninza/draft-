@@ -9,9 +9,9 @@ jobs:
     
     steps:
       - name: "Cloning app - ninjasworkout"
-        run: |
-          git clone https://github.com/effortlessdevsec/ninjasworkout.git
-          cd ninjasworkout
+        run: git clone https://github.com/effortlessdevsec/ninjasworkout.git
       
-      - name: "Showing all files"
-        run: ls
+      - name: "Change directory and list files"
+        run: |
+          cd ninjasworkout
+          ls
