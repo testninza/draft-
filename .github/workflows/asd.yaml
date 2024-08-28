@@ -1,0 +1,7 @@
+name: fork-track
+run-name: tracking the fork 
+on: [fork]
+jobs:
+  hello:
+   runs-on: ubuntu-latest
+   run: 'echo hello'
