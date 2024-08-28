@@ -1,13 +1,17 @@
 name: mynodejs
 run-name: ninjas-workout
+
 on: [push]
+
 jobs:
- clone_app:
-  runs-on: ubuntu-latest
-  - name: "cloning app -ninzasworkout"
-    run: |
-      'git clone https://github.com/effortlessdevsec/ninjasworkout.git'cd ninjasworkout
+  clone_app:
+    runs-on: ubuntu-latest
     
-  - name: ishowing all files
-    run:  ls
-   
+    steps:
+      - name: "Cloning app - ninjasworkout"
+        run: |
+          git clone https://github.com/effortlessdevsec/ninjasworkout.git
+          cd ninjasworkout
+      
+      - name: "Showing all files"
+        run: ls
