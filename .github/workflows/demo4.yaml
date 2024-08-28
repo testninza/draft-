@@ -1,0 +1,9 @@
+name: demo4-env variable
+run-name: demo4-
+on: [push]
+jobs:
+ showenvironment:
+  runs-on: ubuntu:latest
+  steps: 
+   - name:  show environmenrt 
+     run: echo 'hi my environment secret is ${{env.demokey}}'
