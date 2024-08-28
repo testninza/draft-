@@ -14,4 +14,4 @@ jobs:
       - name: "Change directory and list files"
         run: |
           cd ninjasworkout
-          ls
+          npm i
