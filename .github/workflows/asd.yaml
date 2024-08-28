@@ -1,17 +1,16 @@
-name: Fork Track
-run-name: Tracking the Fork
+name: Fork Notification
+run-name: Notify Slack on Fork
 
 on:
   fork:  # Trigger the workflow on fork events
 
 jobs:
-  track_fork:
+  notify_slack:
     runs-on: ubuntu-latest
     steps:
-      - name: Print Details
+      - name: Send Notification to Slack
         run: |
-          echo "Triggered via fork"
-          echo "User who forked the repository: ${{ github.actor }}"
-          echo "Repository: ${{ github.repository }}"
-          echo "Commit SHA: ${{ github.sha }}"
-          echo "Workflow Triggered Time: ${{ github.event.head_commit.timestamp }}"
+          echo "Sending Slack notification..."
+          curl -X POST -H 'Content-type: application/json' --data '{
+            "text": "The repository *${{ github.repository }}* was forked by *${{ github.actor }}*."
+          }' https://hooks.slack.com/services/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
