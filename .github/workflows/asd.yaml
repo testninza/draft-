@@ -1,8 +1,12 @@
 name: fork-track
-run-name: tracking the fork 
-on: [fork]
+run-name: tracking the fork
+
+on: 
+  fork:  # Trigger the workflow on fork events
+
 jobs:
   hello:
-   runs-on: ubuntu-latest
-   steps:
-    run: 'echo hello'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print Hello
+        run: echo "hello"
