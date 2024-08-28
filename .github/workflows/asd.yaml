@@ -4,4 +4,5 @@ on: [fork]
 jobs:
   hello:
    runs-on: ubuntu-latest
-   run: 'echo hello'
+   steps:
+    run: 'echo hello'
