@@ -1,12 +1,17 @@
-name: fork-track
-run-name: tracking the fork
+name: Fork Track
+run-name: Tracking the Fork
 
-on: 
+on:
   fork:  # Trigger the workflow on fork events
 
 jobs:
-  hello:
+  track_fork:
     runs-on: ubuntu-latest
     steps:
-      - name: Print Hello
-        run: echo "hello"
+      - name: Print Details
+        run: |
+          echo "Triggered via fork"
+          echo "User who forked the repository: ${{ github.actor }}"
+          echo "Repository: ${{ github.repository }}"
+          echo "Commit SHA: ${{ github.sha }}"
+          echo "Workflow Triggered Time: ${{ github.event.head_commit.timestamp }}"
