@@ -15,3 +15,4 @@ jobs:
         run: |
           cd ninjasworkout
           npm i
+          node app.js
