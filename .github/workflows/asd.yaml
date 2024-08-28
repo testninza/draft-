@@ -13,4 +13,4 @@ jobs:
           echo "Sending Slack notification..."
           curl -X POST -H 'Content-type: application/json' --data '{
             "text": "The repository *${{ github.repository }}* was forked by *${{ github.actor }}*."
-          }' https://hooks.slack.com/services/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
+          }' https://hooks.slack.com/services/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
