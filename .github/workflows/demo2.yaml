@@ -3,7 +3,7 @@ name: firstdemoonisse
 run-name: first-demo_issue
 on: 
  issues:
-    types: [opened, edited, milestoned]
+    types: [opened, edited, milestoned,closed]
 jobs:
  onissuedemo:
   runs-on: ubuntu-latest
