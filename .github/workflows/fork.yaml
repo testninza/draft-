@@ -1,0 +1,16 @@
+name: Fork Notification
+run-name: Notify Slack on Fork
+
+on:
+  fork:  # Trigger the workflow on fork events
+
+jobs:
+  notify_slack:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send Notification to Slack
+        run: |
+          echo "Sending Slack notification..."
+          curl -X POST -H 'Content-type: application/json' --data '{
+            "text": "The repository *${{ github.repository }}* was forked by *${{ github.actor }}*."
+          }' ${{ secrets.SLACK_WEBHOOK_URL }}
