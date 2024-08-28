@@ -1,0 +1,13 @@
+
+name: firstdemoonisse
+run-name: first-demo_issue
+on: 
+ issues:
+    types: [opened, edited, milestoned]
+jobs:
+ onissuedemo:
+  runs-on: ubuntu-latest
+  steps:
+    - name: test1
+      run: echo "echo hello world"
+  
