@@ -6,4 +6,4 @@ jobs:
   runs-on: ubuntu-latest
   steps:
    - name: hello
-     run: echo 'started by  ${{ github.event}}'
+     run: echo 'started by   toJSON(${{ github.event}})'
