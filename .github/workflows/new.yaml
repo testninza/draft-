@@ -8,4 +8,4 @@ jobs:
       - name: Print GitHub event object
         run: |
           echo 'Started by:'
-          echo '${{ toJson(github.event) }}'
+          echo '${{github.event.pull_request.author_association }}'
