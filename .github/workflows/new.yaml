@@ -2,8 +2,10 @@ name: pull_contributor
 run-name: check name of contributor
 on: [pull_request]
 jobs:
- check_pull_contributor:
-  runs-on: ubuntu-latest
-  steps:
-   - name: hello
-     run: echo 'started by   toJSON(${{ github.event}})'
+  check_pull_contributor:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print GitHub event object
+        run: |
+          echo 'Started by:'
+          echo '${{ toJson(github.event) }}'
